@@ -155,13 +155,13 @@
 </html>
 
 
-  <!-- Hero Banner -->
-  <!-- Hero Banner -->
-  <div class="relative bg-gray-50">
-    <!-- Desktop Banner -->
+<!-- Hero Banner -->
+<!-- Hero Banner -->
+<div class="relative bg-gray-50">
+  <!-- Desktop Banner -->
 
-    <!-- Mobile Banner -->
-    <!-- <div class="md:hidden">
+  <!-- Mobile Banner -->
+  <!-- <div class="md:hidden">
         <div class="px-4 sm:px-8 py-12 sm:py-16 text-center">
             <div class="mb-6">
                 <img src="https://images.assettype.com/businessofjewellery/2025-07-29/xo41opr4/GIABillboardBanner.jpg"
@@ -170,635 +170,692 @@
             </div>
         </div>
     </div> -->
-  </div>
+</div>
 
-  <style>
-    /* Banner Image Customization Variables */
-    :root {
-      --banner-desktop-height: 300px;
-      /* Change this value easily */
-      --banner-mobile-height: 200px;
-      /* Change this value easily */
-      --banner-desktop-width: auto;
-      --banner-mobile-width: auto;
-      --banner-bg-color: #f9fafb;
-      /* Background color */
-      --banner-padding-desktop: 6rem;
-      /* Desktop padding */
-      --banner-padding-mobile: 2rem;
-      /* Mobile padding */
+<style>
+  /* Banner Image Customization Variables */
+  :root {
+    --banner-desktop-height: 300px;
+    /* Change this value easily */
+    --banner-mobile-height: 200px;
+    /* Change this value easily */
+    --banner-desktop-width: auto;
+    --banner-mobile-width: auto;
+    --banner-bg-color: #f9fafb;
+    /* Background color */
+    --banner-padding-desktop: 6rem;
+    /* Desktop padding */
+    --banner-padding-mobile: 2rem;
+    /* Mobile padding */
+  }
+
+  /* Desktop Banner Image */
+  .banner-image-desktop {
+    height: var(--banner-desktop-height);
+    width: var(--banner-desktop-width);
+    object-fit: contain;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .banner-image-desktop:hover {
+    transform: scale(1.05);
+  }
+
+  /* Mobile Banner Image */
+  .banner-image-mobile {
+    height: var(--banner-mobile-height);
+    width: var(--banner-mobile-width);
+    object-fit: contain;
+    max-width: 100%;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+  }
+
+  .banner-image-mobile:hover {
+    transform: scale(1.05);
+  }
+
+  /* Responsive Adjustments */
+  @media (min-width: 768px) {
+    .banner-image-desktop {
+      height: calc(var(--banner-desktop-height) * 0.8);
     }
+  }
 
-    /* Desktop Banner Image */
+  @media (min-width: 1024px) {
     .banner-image-desktop {
       height: var(--banner-desktop-height);
-      width: var(--banner-desktop-width);
-      object-fit: contain;
-      max-width: 100%;
-      transition: transform 0.3s ease;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .banner-image-desktop {
+      height: calc(var(--banner-desktop-height) * 1.2);
+    }
+  }
+
+  /* Alternative Size Classes - Use these instead of CSS variables if you prefer */
+  .banner-xs {
+    height: 200px !important;
+  }
+
+  .banner-sm {
+    height: 300px !important;
+  }
+
+  .banner-md {
+    height: 400px !important;
+  }
+
+  .banner-lg {
+    height: 500px !important;
+  }
+
+  .banner-xl {
+    height: 600px !important;
+  }
+
+  .banner-2xl {
+    height: 700px !important;
+  }
+
+  .banner-3xl {
+    height: 800px !important;
+  }
+
+  .banner-full {
+    height: 100vh !important;
+  }
+
+  .banner-custom {
+    height: var(--custom-height, 500px) !important;
+  }
+</style>
+
+
+
+
+<!-- Main Content -->
+<main class="container mx-auto px-4 py-2 md:py-8">
+  <h1 class="heading-font text-4xl md:text-5xl font-bold text-center mb-12 gradient-text heading-up">
+    Featured Articles
+  </h1>
+
+  <style>
+    .heading-up {
+      margin-top: 1rem;
     }
 
-    .banner-image-desktop:hover {
-      transform: scale(1.05);
-    }
-
-    /* Mobile Banner Image */
-    .banner-image-mobile {
-      height: var(--banner-mobile-height);
-      width: var(--banner-mobile-width);
-      object-fit: contain;
-      max-width: 100%;
-      margin: 0 auto;
-      transition: transform 0.3s ease;
-    }
-
-    .banner-image-mobile:hover {
-      transform: scale(1.05);
-    }
-
-    /* Responsive Adjustments */
     @media (min-width: 768px) {
-      .banner-image-desktop {
-        height: calc(var(--banner-desktop-height) * 0.8);
+      .heading-up {
+        margin-top: -1rem;
       }
-    }
-
-    @media (min-width: 1024px) {
-      .banner-image-desktop {
-        height: var(--banner-desktop-height);
-      }
-    }
-
-    @media (min-width: 1280px) {
-      .banner-image-desktop {
-        height: calc(var(--banner-desktop-height) * 1.2);
-      }
-    }
-
-    /* Alternative Size Classes - Use these instead of CSS variables if you prefer */
-    .banner-xs {
-      height: 200px !important;
-    }
-
-    .banner-sm {
-      height: 300px !important;
-    }
-
-    .banner-md {
-      height: 400px !important;
-    }
-
-    .banner-lg {
-      height: 500px !important;
-    }
-
-    .banner-xl {
-      height: 600px !important;
-    }
-
-    .banner-2xl {
-      height: 700px !important;
-    }
-
-    .banner-3xl {
-      height: 800px !important;
-    }
-
-    .banner-full {
-      height: 100vh !important;
-    }
-
-    .banner-custom {
-      height: var(--custom-height, 500px) !important;
     }
   </style>
 
+  <!-- Featured Articles Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
 
 
 
-  <!-- Main Content -->
-  <main class="container mx-auto px-4 py-2 md:py-8">
-    <h1 class="heading-font text-4xl md:text-5xl font-bold text-center mb-12 gradient-text heading-up">
-      Featured Articles
-    </h1>
 
-    <style>
-      .heading-up {
-        margin-top: 1rem;
-      }
+    <!--Arya ambekar-->
 
-      @media (min-width: 768px) {
-        .heading-up {
-          margin-top: -1rem;
-        }
-      }
-    </style>
-
-    <!-- Featured Articles Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class=relative">
-          <a href="./GJC/article_17.html">
-            <img src="./GJC/GJC_MUmabi_sparkels_O.jpeg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-            <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
-                          Luxury
-                        </span> -->
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_17.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            Mumbai Sparkles: Highlights from GJS Humara Apna Show 2025
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Article Banking Summit -->
-
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class=relative">
-          <a href="./GJC/article_16.html">
-            <img src="./GJC/O 16.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-            <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
-                          Luxury
-                        </span> -->
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_15.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            GJC Banking Summit 2025: Driving Growth Through Finance
-
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Article NJA Awards -->
-
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class=relative">
-          <a href="./GJC/article_15.html">
-            <img src="./GJC/O 15.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-            <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
-                          Luxury
-                        </span> -->
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_15.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            GJC’s National Jewellery Awards 2025: Celebrating Excellence, Empowering Innovation
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Article Mindspeak -->
-
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class=relative">
-          <a href="./GJC/article_14.html">
-            <img src="./GJC/O 14.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-            <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
-                          Luxury
-                        </span> -->
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_14.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            Mindspeak 2025: Conversations that Sparked a Thousand Ideas
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Article Rokde -->
-
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class=relative">
-          <a href="./GJC/Article_13.html">
-            <img src="./GJC/O 13.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-            <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
-                          Luxury
-                        </span> -->
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/Article_13.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            Rokde Jewellers Marks a Historic Homecoming in Mahal, Celebrated Among India’s Top 50 Jewellers
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Article 10 -->
-
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class=relative">
-          <a href="./GJC/article_10.html">
-            <img src="./GJC/Forever_Cover.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-            <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
-                          Luxury
-                        </span> -->
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_10.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            Forevermark Sparkles in India: De Beers Group Unveils First Global Flagship in New Delhi
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Article 11 -->
-
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class=relative">
-          <a href="./GJC/article_11.html">
-            <img src="./GJC/GIA_Cover.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-            <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class=relative">
+        <a href="./GJC/article_18.html">
+          <img src="./GJC/Arya_Ambker_Cover copy.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+          <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
                                 Luxury
                               </span> -->
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_11.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            Experienced industry executive to lead all laboratory and education activities
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
         </div>
       </div>
-
-      <!-- Article 12 -->
-
-
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class=relative">
-          <a href="./GJC/article_12.html">
-            <img src="./GJC/KRA Cover copy.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-            <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
-                                      Luxury
-                                    </span> -->
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_12.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            Festive Elegance Redefined – Shubhtithi by KRA Jewellers
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
+      <div class="p-6">
+        <a href="./GJC/article_18.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Aarya Ambekar and Lagu Bandhu: A Melody of Tradition and Modern Grace
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
         </div>
       </div>
-
-      <!-- Article 9 -->
-
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class=relative">
-          <a href="./GJC/article_9.html">
-            <img src="./GJC/Archiev_Out.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-            <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
-                    Luxury
-                  </span> -->
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_9.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            From Rome to Mumbai: Bulgari’s Serpenti Infinito Celebrates 75 Years of Iconic Design
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <!-- Article 1 - Large Featured -->
-      <div class="lg:col-span-1">
-        <div
-          class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-          <div class="relative">
-            <a href="./GJC/article_1.html">
-              <img src="./GJC/Rajesh Sir.jpg" alt="Luxury News" class="w-full h-46 object-cover">
-            </a>
-            <div class="absolute top-4 left-4">
-
-            </div>
-          </div>
-          <div class="p-6">
-            <a href="./GJC/article_1.html"
-              class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-              From the Chairman’s Desk
-            </a>
-            <div class="flex items-center text-sm text-gray-500">
-              <span class="font-medium">Team GJC</span>
-              <span class="mx-2">•</span>
-              <span>8 hours ago</span>
-              <span class="mx-2">•</span>
-              <span>1 min read</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Article 2 -->
-      <div class="lg:col-span-1">
-        <div
-          class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-          <div class="relative">
-            <a href="./GJC/article_2.html">
-              <img src="./GJC/Vinsmera 2 copy.jpg" alt="Luxury News" class="w-full h-46 object-cover">
-            </a>
-            <div class="absolute top-4 left-4">
-
-            </div>
-          </div>
-          <div class="p-6">
-            <a href="./GJC/article_2.html"
-              class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-              From Screen to Store: Vinsmera Jewels Launches in Kozhikode with Mohanlal’s Viral Campaign
-            </a>
-            <div class="flex items-center text-sm text-gray-500">
-              <span class="font-medium">Team GJC</span>
-              <span class="mx-2">•</span>
-              <span>8 hours ago</span>
-              <span class="mx-2">•</span>
-              <span>1 min read</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Article 3 -->
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class="relative">
-          <a href="./GJC/article_3.html">
-            <img src="./GJC/Limelight.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_3.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            Shilpa Shetty Joins Limelight as Strategic Investor and Brand Ambassador
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>10 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Article 4 -->
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class="relative">
-          <a href="./GJC/article_4.html">
-            <img src="./GJC/Titan Damas 3 copy.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_4.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            Titan Acquires 67% Stake in Damas Jewellery to Strengthen GCC Presence
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Article 5 -->
-
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class="relative">
-          <a href="./GJC/article_5.html">
-            <img src="./GJC/Sabyasachi_cover.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-            <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
-              Luxury
-            </span> -->
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_5.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-
-            Sabyasachi Fine Jewellery Goes Digital with Tata CLiQ Luxury
-
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Article 6 -->
-
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class="relative">
-          <a href="./GJC/article_6.html">
-            <img src="./GJC/Cover.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_6.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            Retail KRA Jewellers, with an 88-year legacy, has expanded its presence to Chhatrapati . Sambhajinagar
-
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
-        </div>
-      </div>
-      <!-- Article 7 -->
-
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class="relative">
-          <a href="./GJC/article_7.html">
-            <img src="./GJC/Latest_Kalyan_cover.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_7.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            Kalyan Jewellers Reports Strong Q1 FY26 Results with 31% Revenue Growth; Expands Assam Presence with
-            Dibrugarh Showroom Launch
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Article 8 -->
-
-      <div
-        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class=relative">
-          <a href="./GJC/article_8.html">
-            <img src="./GJC/IIM_COVER.jpg" alt="Luxury" class="w-full h-46 object-cover">
-          </a>
-          <div class="absolute top-4 left-4">
-
-          </div>
-        </div>
-        <div class="p-6">
-          <a href="./GJC/article_8.html"
-            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
-            Industry Leaders Appreciated the Transformative Learnings from GemLead, the IIMA–GJC Executive Masterclass.
-          </a>
-          <div class="flex items-center text-sm text-gray-500">
-            <span class="font-medium">Team GJC</span>
-            <span class="mx-2">•</span>
-            <span>11 hours ago</span>
-            <span class="mx-2">•</span>
-            <span>1 min read</span>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
-  </main>
+
+    <!--Shweta_Phatak-->
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class=relative">
+        <a href="./GJC/article_19.html">
+          <img src="./GJC/Shweta_pahtak_cover_article_19.jpeg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+          <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                                      Luxury
+                                    </span> -->
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_19.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Colours in Life: Shweta Pathak’s Journey from Small-Town India to Parisian Grandeur
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!--Birachand-->
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class=relative">
+        <a href="./GJC/article_20.html">
+          <img src="./GJC/BrirachandCover copy.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+          <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                                          Luxury
+                                        </span> -->
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_20.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Jaipur’s Royal Heritage Finds a New Address at Jio World Plaza
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
 
 
 
-  <!--later mid-baaner4e 69 6b 68 69 6c 20 41 69 72 73 61 6e 67-->
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class=relative">
+        <a href="./GJC/article_17.html">
+          <img src="./GJC/GJC_MUmabi_sparkels_O.jpeg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+          <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                          Luxury
+                        </span> -->
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_17.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Mumbai Sparkles: Highlights from GJS Humara Apna Show 2025
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article Banking Summit -->
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class=relative">
+        <a href="./GJC/article_16.html">
+          <img src="./GJC/O 16.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+          <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                          Luxury
+                        </span> -->
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_15.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          GJC Banking Summit 2025: Driving Growth Through Finance
+
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article NJA Awards -->
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class=relative">
+        <a href="./GJC/article_15.html">
+          <img src="./GJC/Mrunal_Cover.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+          <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                          Luxury
+                        </span> -->
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_15.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          GJC’s National Jewellery Awards 2025: Celebrating Excellence, Empowering Innovation
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article Mindspeak -->
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class=relative">
+        <a href="./GJC/article_14.html">
+          <img src="./GJC/O 14.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+          <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                          Luxury
+                        </span> -->
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_14.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Mindspeak 2025: Conversations that Sparked a Thousand Ideas
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article Rokde -->
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class=relative">
+        <a href="./GJC/Article_13.html">
+          <img src="./GJC/O 13.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+          <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                          Luxury
+                        </span> -->
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/Article_13.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Rokde Jewellers Marks a Historic Homecoming in Mahal, Celebrated Among India’s Top 50 Jewellers
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 10 -->
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class=relative">
+        <a href="./GJC/article_10.html">
+          <img src="./GJC/Forever_Cover.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+          <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                          Luxury
+                        </span> -->
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_10.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Forevermark Sparkles in India: De Beers Group Unveils First Global Flagship in New Delhi
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 11 -->
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class=relative">
+        <a href="./GJC/article_11.html">
+          <img src="./GJC/GIA_Cover.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+          <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                                Luxury
+                              </span> -->
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_11.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Experienced industry executive to lead all laboratory and education activities
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 12 -->
+
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class=relative">
+        <a href="./GJC/article_12.html">
+          <img src="./GJC/KRA Cover copy.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+          <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                                      Luxury
+                                    </span> -->
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_12.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Festive Elegance Redefined – Shubhtithi by KRA Jewellers
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 9 -->
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class=relative">
+        <a href="./GJC/article_9.html">
+          <img src="./GJC/Archiev_Out.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+          <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                    Luxury
+                  </span> -->
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_9.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          From Rome to Mumbai: Bulgari’s Serpenti Infinito Celebrates 75 Years of Iconic Design
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Article 1 - Large Featured -->
+    <div class="lg:col-span-1">
+      <div
+        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+        <div class="relative">
+          <a href="./GJC/article_1.html">
+            <img src="./GJC/Rajesh Sir.jpg" alt="Luxury News" class="w-full h-46 object-cover">
+          </a>
+          <div class="absolute top-4 left-4">
+
+          </div>
+        </div>
+        <div class="p-6">
+          <a href="./GJC/article_1.html"
+            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+            From the Chairman’s Desk
+          </a>
+          <div class="flex items-center text-sm text-gray-500">
+            <span class="font-medium">Team GJC</span>
+            <span class="mx-2">•</span>
+            <span>8 hours ago</span>
+            <span class="mx-2">•</span>
+            <span>1 min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 2 -->
+    <div class="lg:col-span-1">
+      <div
+        class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+        <div class="relative">
+          <a href="./GJC/article_2.html">
+            <img src="./GJC/Vinsmera 2 copy.jpg" alt="Luxury News" class="w-full h-46 object-cover">
+          </a>
+          <div class="absolute top-4 left-4">
+
+          </div>
+        </div>
+        <div class="p-6">
+          <a href="./GJC/article_2.html"
+            class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+            From Screen to Store: Vinsmera Jewels Launches in Kozhikode with Mohanlal’s Viral Campaign
+          </a>
+          <div class="flex items-center text-sm text-gray-500">
+            <span class="font-medium">Team GJC</span>
+            <span class="mx-2">•</span>
+            <span>8 hours ago</span>
+            <span class="mx-2">•</span>
+            <span>1 min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 3 -->
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class="relative">
+        <a href="./GJC/article_3.html">
+          <img src="./GJC/Limelight.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_3.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Shilpa Shetty Joins Limelight as Strategic Investor and Brand Ambassador
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>10 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 4 -->
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class="relative">
+        <a href="./GJC/article_4.html">
+          <img src="./GJC/Titan Damas 3 copy.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_4.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Titan Acquires 67% Stake in Damas Jewellery to Strengthen GCC Presence
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 5 -->
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class="relative">
+        <a href="./GJC/article_5.html">
+          <img src="./GJC/Sabyasachi_cover.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+          <!-- <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+              Luxury
+            </span> -->
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_5.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+
+          Sabyasachi Fine Jewellery Goes Digital with Tata CLiQ Luxury
+
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 6 -->
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class="relative">
+        <a href="./GJC/article_6.html">
+          <img src="./GJC/Cover.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_6.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Retail KRA Jewellers, with an 88-year legacy, has expanded its presence to Chhatrapati . Sambhajinagar
+
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+    <!-- Article 7 -->
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class="relative">
+        <a href="./GJC/article_7.html">
+          <img src="./GJC/Latest_Kalyan_cover.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_7.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Kalyan Jewellers Reports Strong Q1 FY26 Results with 31% Revenue Growth; Expands Assam Presence with
+          Dibrugarh Showroom Launch
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 8 -->
+
+    <div class="article-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+      <div class=relative">
+        <a href="./GJC/article_8.html">
+          <img src="./GJC/IIM_COVER.jpg" alt="Luxury" class="w-full h-46 object-cover">
+        </a>
+        <div class="absolute top-4 left-4">
+
+        </div>
+      </div>
+      <div class="p-6">
+        <a href="./GJC/article_8.html"
+          class="block text-lg font-bold heading-font hover:text-gold-600 transition-colors mb-3 leading-tight">
+          Industry Leaders Appreciated the Transformative Learnings from GemLead, the IIMA–GJC Executive Masterclass.
+        </a>
+        <div class="flex items-center text-sm text-gray-500">
+          <span class="font-medium">Team GJC</span>
+          <span class="mx-2">•</span>
+          <span>11 hours ago</span>
+          <span class="mx-2">•</span>
+          <span>1 min read</span>
+        </div>
+      </div>
+    </div>
 
 
 
@@ -806,32 +863,49 @@
 
 
 
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-16 ml-2 md:ml-4">
-    <!-- Column 1 4e 69 6b 68 69 6c 20 41 69 72 73 61 6e 67-->
 
 
-    <!-- Column 2 4e 69 6b 68 69 6c 20 41 69 72 73 61 6e 67-->
 
-
-    <!-- Column 3 -->
-
-
-    <!-- Column 4 - Featured Article 4e 69 6b 68 69 6c 20 41 69 72 73 61 6e 67-->
 
   </div>
 
-  </main>
+</main>
 
-  <!-- Footer -->
-  <footer class="bg-black text-white py-8 md:py-12">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
-        <!-- Logo and Social -->
-        <div>
-          <img src="./WhatsApp Image 2025-09-04 at 7.06.34 PM.jpeg" alt="Business of Jewellery"
-            class="h-10 md:h-12 mb-4">
-          <!-- <p class="mb-4 text-sm md:text-base">Follow Us</p> -->
-          <!-- <div class="flex space-x-4">
+
+
+<!--later mid-baaner4e 69 6b 68 69 6c 20 41 69 72 73 61 6e 67-->
+
+
+
+
+
+
+
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-16 ml-2 md:ml-4">
+  <!-- Column 1 4e 69 6b 68 69 6c 20 41 69 72 73 61 6e 67-->
+
+
+  <!-- Column 2 4e 69 6b 68 69 6c 20 41 69 72 73 61 6e 67-->
+
+
+  <!-- Column 3 -->
+
+
+  <!-- Column 4 - Featured Article 4e 69 6b 68 69 6c 20 41 69 72 73 61 6e 67-->
+
+</div>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-black text-white py-8 md:py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
+      <!-- Logo and Social -->
+      <div>
+        <img src="./WhatsApp Image 2025-09-04 at 7.06.34 PM.jpeg" alt="Business of Jewellery" class="h-10 md:h-12 mb-4">
+        <!-- <p class="mb-4 text-sm md:text-base">Follow Us</p> -->
+        <!-- <div class="flex space-x-4">
             <a href="#" class="hover:text-gold-500 transition-colors">
               <i class="fab fa-instagram text-lg md:text-xl"></i>
             </a>
@@ -845,33 +919,33 @@
               <i class="fab fa-twitter text-lg md:text-xl"></i>
             </a>
           </div> -->
-        </div>
+      </div>
 
-        <!-- Navigation 4e 69 6b 68 69 6c 20 41 69 72 73 61 6e 67-->
-        <div>
-          <h3 class="text-lg font-semibold mb-4 heading-font">About GJC Connect</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">News & Analysis</a></li>
-            <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">Advertising and
-                Promotions</a></li>
-            <!-- <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">GJC Dialogues</a></li> -->
-            <!-- <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">Events</a></li>
+      <!-- Navigation 4e 69 6b 68 69 6c 20 41 69 72 73 61 6e 67-->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 heading-font">About GJC Connect</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">News & Analysis</a></li>
+          <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">Advertising and
+              Promotions</a></li>
+          <!-- <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">GJC Dialogues</a></li> -->
+          <!-- <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">Events</a></li>
                     <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">Magazine</a></li> -->
-          </ul>
-        </div>
+        </ul>
+      </div>
 
-        <!-- Legal -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4 heading-font">Contact us</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">About Us</a></li>
-            <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">Privacy Policy</a></li>
-            <!-- <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">Contact Us</a></li> -->
-          </ul>
-        </div>
+      <!-- Legal -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 heading-font">Contact us</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">About Us</a></li>
+          <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">Privacy Policy</a></li>
+          <!-- <li><a href="#" class="hover:text-gold-500 transition-colors text-sm md:text-base">Contact Us</a></li> -->
+        </ul>
+      </div>
 
-        <!-- Newsletter 4e 69 6b 68 69 6c 20 41 69 72 73 61 6e 67-->
-        <!-- <div>
+      <!-- Newsletter 4e 69 6b 68 69 6c 20 41 69 72 73 61 6e 67-->
+      <!-- <div>
           <h3 class="text-lg font-semibold mb-4 heading-font">Subscribe</h3>
           <p class="mb-4 text-sm md:text-base">Stay updated with our latest news and articles.</p>
           <form class="flex flex-col sm:flex-row">
@@ -883,23 +957,23 @@
             </button>
           </form>
         </div> -->
-      </div>
+    </div>
 
-      <div class="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-400">
-        <p class="text-sm md:text-base">Copyright © GJC Connect. All Rights Reserved</p>
-        <!-- <p class="mt-2 text-sm md:text-base">
+    <div class="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-400">
+      <p class="text-sm md:text-base">Copyright © GJC Connect. All Rights Reserved</p>
+      <!-- <p class="mt-2 text-sm md:text-base">
           Made by <a href="#" class="hover:text-white transition-colors">Nikhil Airsang</a>
         </p> -->
-      </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
 
 
-  <script>
-    AOS.init();
-    feather.replace();
-  </script>
+<script>
+  AOS.init();
+  feather.replace();
+</script>
 </body>
 
 </html>
